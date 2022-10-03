@@ -41,7 +41,7 @@ buttonEl.addEventListener('click', (event) => {
   spanEl.textContent = rondomColor + ' => ' + shade_name1 + ' (' + shade_name2 + ')'
 
   bodyEl.style.color = rondomColore
-  spanEl.textContent = rondomColore + ' => ' + shade_name1 + ' (' + shade_name2 + ')'
+  spanEl.textContent = `${rondomColore} ${shade_name1} (${shade_name2})`
 
 })
 
