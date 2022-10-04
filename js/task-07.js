@@ -7,15 +7,13 @@
 
 const inputElMinMax = document.querySelector("#font-size-control")
 const spanEl = document.querySelector("#text")
+const numberEl = (Number(inputElMinMax.min) + Number(inputElMinMax.max)) / 2 + 'px'
 
-inputElMinMax.addEventListener('mouseup', (event) => {
+spanEl.style.fontSize = numberEl
+
+inputElMinMax.addEventListener('input', (event) => {
   spanEl.style.fontSize = event.target.value + 'px'
 
-  console.log(event.target.value);
 });
-
-
-
-
 
 

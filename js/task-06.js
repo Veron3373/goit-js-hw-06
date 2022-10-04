@@ -14,20 +14,16 @@
 let validationInput = document.querySelector('#validation-input')
 validationInput.addEventListener('blur', (event) => {
 
-  if (event.target.value.length === parseInt(event.target.dataset.length)) {
+  const inputValue = event.target.value.length
+
+  if (inputValue === parseInt(event.target.dataset.length)) {
     validationInput.classList.add("valid")
-  } else {
+    validationInput.classList.remove("invalid")
+    } else {
     validationInput.classList.add("invalid")
+    validationInput.classList.remove("valid")
   }
-});
+  return inputValue
+  });
 
-//*Тернарний
-
-//let validationInput = document.querySelector('#validation-input')
-//validationInput.addEventListener('blur', (event) => {
-//  event.target.value.length === parseInt(event.target.dataset.length) ?
-//    validationInput.classList.add("valid")
-//    :
-//    validationInput.classList.add("invalid")
-//})
 

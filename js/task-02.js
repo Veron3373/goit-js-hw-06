@@ -30,24 +30,20 @@ const ingredients = [
   'Condiments',
 ];
 
-ingredients.map(ingredient => {
+
+const ulEl = {
+  list: document.querySelector('#ingredients'),
+}
+
+const ingredientsEL = ingredients.map((ingredient) => {
 
   const liItem = document.createElement('li')
-  liItem.textContent = `${ingredient}`
   liItem.classList.add('item')
-
-  const ulEl = document.querySelector('#ingredients')
-  ulEl.append(liItem)
+  liItem.textContent = `${ingredient}`
+  return liItem
 });
 
-
-
-
-
-
-
-
-
+ulEl.list.append(...ingredientsEL)
 
 
 

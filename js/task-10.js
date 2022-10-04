@@ -24,3 +24,15 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+let boxesEl = document.querySelector('#boxes')
+
+//створення кубика
+
+boxesEl.insertAdjacentHTML('beforeend', `<div style="background-color: ${getRandomHexColor()}; width: 30px; height: 30px;"></div>
+      `);
+
+
+
+
+

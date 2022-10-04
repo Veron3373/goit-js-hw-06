@@ -7,7 +7,7 @@
 const inputRef = document.querySelector("#name-input")
 const outputRef = document.querySelector("#name-output")
 
-inputRef.addEventListener("change", (event) => {
+inputRef.addEventListener("input", (event) => {
   const inputValue = event.target.value;
 
   if (!event.target.value) {
